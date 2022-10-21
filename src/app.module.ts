@@ -16,7 +16,7 @@ import {TodoEntity} from "./to-do-module/entities/todo.entity";
       username: 'root',
       password: '',
       database: 'newdb',
-      entities: [],
+      entities: [TodoEntity],
       synchronize: true,
     })
   ],

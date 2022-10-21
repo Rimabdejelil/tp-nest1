@@ -1,5 +1,5 @@
 import { Controller , Post , Get , Body} from '@nestjs/common';
-import { pipeCostum } from './pipeCustom/pipeCostum';
+
 
 
 
@@ -15,7 +15,7 @@ export class PipeController {
 
     @Post('')
     postArray(
-       @Body('skills' , new pipeCostum()) skill
+       @Body('skills') skill
     ){
         this.skills.push(skill);
        return "skills array";

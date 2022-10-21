@@ -4,15 +4,12 @@ import { ArgumentMetadata, BadRequestException, Body, PipeTransform } from "@nes
 export class pipeCostum implements PipeTransform {
     
 
-    transform(value: any, metadata: ArgumentMetadata) {
-       if( metadata.type == 'body') 
-       {
-         
+    transform(value: string [], metadata: ArgumentMetadata) {
         
+       if( metadata.type == 'body') 
+       { 
+        return value.join('-').toUpperCase();        
        }
-       else {
-        throw new BadRequestException('input invalid') ; 
-       }
-
+     
     }
 }
